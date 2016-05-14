@@ -12,13 +12,21 @@
 			runReplacer:function($elements) {
 				$elements.addClass('highlighted-ship')
 						.each(function() {
-							var jpName = $(this).text();
-							var readableName = ShipReplacer._database.getShipName(jpName);
-							
-							if(readableName != null && readableName != jpName) {
-								$(this).text(readableName + " / " + jpName)
+							if($(this).find("div").length > 0) {
+								ShipReplacer.replaceAt($(this).find("div"))
+							} else {
+								ShipReplacer.replaceAt($(this))
 							}
 						})
+			},
+			
+			replaceAt:function($element) {
+				var jpName = $element.text();
+				var readableName = ShipReplacer._database.getShipName(jpName);
+				
+				if(readableName != null && readableName != jpName) {
+					$element.text(readableName + " / " + jpName)
+				}
 			}
 	}
 })()
