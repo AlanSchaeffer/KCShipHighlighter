@@ -5,10 +5,10 @@
 	"description": "Highlight the kanji names of the shipgirls in poi-statistics to make it easier to read.",
 	"version": "0.1",
 	
-	"permissions": ["http://db.kcwiki.moe/"],
+	"permissions": ["http://db.kcwiki.moe/","https://db.kcwiki.moe/"],
 	
 	"content_scripts": [{
-		"matches": ["http://db.kcwiki.moe/*"],
+		"matches": ["http://db.kcwiki.moe/*","https://db.kcwiki.moe/*","https://db.kcwiki.org/*"],
 	    "css": ["css/ship_highlighter.css"],
 	    "js": ["js/jquery-2.1.4.min.js", "js/ShipDatabase.js", "js/ShipReplacer.js", "js/poi-statistics.js"],
 	    "run-at": "document_end"
