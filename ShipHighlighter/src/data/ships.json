@@ -236,6 +236,8 @@
 	"満月":"Michitsuki",
 	"花月":"Hanazuki",
 	"春風":"Harukaze",
+	"神風":"Kamikaze",
+	"朝風":"Asakaze",
 	
 	"明石":"Akashi",
 	"あきつ":"Akitsumaru",
@@ -253,4 +255,5 @@
 	"Libeccio":"Libeccio",
 	
 	"(无掉落)":"(None)"
+	
 }
